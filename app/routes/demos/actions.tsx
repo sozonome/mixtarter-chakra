@@ -2,9 +2,9 @@ import { useEffect, useRef } from "react";
 import type { ActionFunction } from "remix";
 import { Form, json, useActionData, redirect } from "remix";
 
-export function meta() {
+export const meta = () => {
   return { title: "Actions Demo" };
-}
+};
 
 // When your form sends a POST, the action is called on the server.
 // - https://remix.run/api/conventions#action
@@ -60,12 +60,12 @@ export default function ActionsDemo() {
           <p>
             <i>What is more useful when it is broken?</i>
           </p>
-          <label>
+          <label htmlFor="answer">
             <div>Answer:</div>
             <input ref={answerRef} name="answer" type="text" />
           </label>
           <div>
-            <button>Answer!</button>
+            <button type="submit">Answer!</button>
           </div>
           {actionMessage ? (
             <p>

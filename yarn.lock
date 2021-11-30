@@ -904,6 +904,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/outfit@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/outfit/-/outfit-4.5.0.tgz#3e262007bbe58192f0e30896145578898f148716"
+  integrity sha512-H2Z8Z8WNKl4DkDlwjOTGJsPM8SueXjSmAXHP2Ex6NEXcz/TtZ2pWkcKbT2K6BV2V16a0ZeddM/X3cFOnm+br9Q==
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"

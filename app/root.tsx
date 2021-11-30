@@ -8,6 +8,7 @@ import {
   ErrorBoundary,
   Layout,
 } from "./components/root";
+import customTheme from "./styles/theme";
 
 import globalStylesUrl from "~/styles/global.css";
 
@@ -21,7 +22,7 @@ export const links: LinksFunction = () => {
 const App = () => {
   return (
     <Document>
-      <ChakraProvider>
+      <ChakraProvider theme={customTheme}>
         <Layout>
           <Outlet />
         </Layout>
