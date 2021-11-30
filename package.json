@@ -6,18 +6,26 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "postinstall": "remix setup node"
+    "postinstall": "remix setup node",
+    "lint": "eslint app",
+    "lint:fix": "eslint app --fix && yarn format",
+    "format": "prettier --write app",
+    "up-latest": "yarn upgrade-interactive --latest",
+    "release": "standard-version",
+    "push-release": "git push --follow-tags origin main",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.2",
-    "@emotion/react": "11",
-    "@emotion/styled": "11",
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
     "@remix-run/react": "^1.0.6",
     "@remix-run/serve": "^1.0.6",
     "@remix-run/vercel": "^1.0.6",
-    "framer-motion": "4",
+    "framer-motion": "^4.1.17",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "remix": "^1.0.6"
   },
   "devDependencies": {
@@ -26,6 +34,9 @@
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
     "commitlint": "^15.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-sznm": "^0.1.13",
+    "husky": "^7.0.0",
     "lint-staged": "^12.1.2",
     "prettier": "^2.5.0",
     "standard-version": "^9.3.2",
