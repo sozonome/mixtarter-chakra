@@ -1,8 +1,9 @@
 {
   "private": true,
-  "name": "remix-app-template",
+  "name": "mixtarter-chakra",
   "description": "",
-  "license": "",
+  "author": "sozonome",
+  "version": "0.1.0",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
