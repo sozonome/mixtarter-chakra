@@ -2,6 +2,8 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/sozonome/mixtarter-chakra)
 
+[![mixtarter-chakra](https://socialify.git.ci/sozonome/mixtarter-chakra/image?font=Inter&language=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)](https://github.com/sozonome/mixtarter-chakra)
+
 This is a [Remix 💿](https://remix.run/) project bootstrapped with `create-remix` (vercel deployment), added with [**Chakra UI**](https://chakra-ui.com) and [**TypeScript**](https://www.typescriptlang.org) setup.
 Start developing right away!
 
