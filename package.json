@@ -10,6 +10,7 @@
     "postinstall": "remix setup node",
     "lint": "eslint app",
     "lint:fix": "eslint app --fix && yarn format",
+    "type-check": "tsc --noEmit",
     "format": "prettier --write app",
     "up-latest": "yarn upgrade-interactive --latest",
     "release": "standard-version",
