@@ -1,5 +1,8 @@
 import { Links, LiveReload, Meta, Scripts, ScrollRestoration } from "remix";
 
+import Layout from "./layout";
+import Providers from "./Providers";
+
 type DocumentProps = {
   children: React.ReactNode;
   title?: string;
@@ -16,7 +19,9 @@ const Document = ({ children, title }: DocumentProps) => {
         <Links />
       </head>
       <body>
-        {children}
+        <Providers>
+          <Layout>{children}</Layout>
+        </Providers>
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}

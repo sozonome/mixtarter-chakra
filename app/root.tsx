@@ -1,15 +1,7 @@
-import { ChakraProvider } from "@chakra-ui/react";
 import { Outlet } from "remix";
 import type { LinksFunction } from "remix";
 
-import {
-  CatchBoundary,
-  Document,
-  ErrorBoundary,
-  Layout,
-} from "./components/root";
-import customTheme from "./styles/theme";
-
+import { CatchBoundary, Document, ErrorBoundary } from "~/components/root";
 import globalStylesUrl from "~/styles/global.css";
 
 // https://remix.run/api/app#links
@@ -28,11 +20,7 @@ export const links: LinksFunction = () => {
 const App = () => {
   return (
     <Document>
-      <ChakraProvider theme={customTheme}>
-        <Layout>
-          <Outlet />
-        </Layout>
-      </ChakraProvider>
+      <Outlet />
     </Document>
   );
 };

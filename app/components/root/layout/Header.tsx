@@ -9,6 +9,9 @@ const Header = () => {
       <Heading as="h1" size="md">
         <Link to="/">mixtarter-chakra</Link>
       </Heading>
+      <Heading as="h1" size="md">
+        <Link to="/a">mixtarter-chakra</Link>
+      </Heading>
 
       <Box marginLeft="auto">
         <ThemeToggle />
