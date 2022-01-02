@@ -4,8 +4,8 @@ import { renderToString } from "react-dom/server";
 import { RemixServer } from "remix";
 import type { EntryContext } from "remix";
 
+import ServerStyleContext from "~/styles/context.server";
 import createEmotionCache from "~/styles/createEmotionCache";
-import StylesContext from "~/styles/StylesContext";
 
 const emotionCache = createEmotionCache();
 
@@ -18,17 +18,21 @@ const handleRequest = (
   const { extractCriticalToChunks } = createEmotionServer(emotionCache);
 
   const html = renderToString(
-    <CacheProvider value={emotionCache}>
-      <RemixServer context={remixContext} url={request.url} />
-    </CacheProvider>
+    <ServerStyleContext.Provider value={null}>
+      <CacheProvider value={emotionCache}>
+        <RemixServer context={remixContext} url={request.url} />
+      </CacheProvider>
+    </ServerStyleContext.Provider>
   );
 
   const chunks = extractCriticalToChunks(html);
 
   const markup = renderToString(
-    <StylesContext.Provider value={chunks.styles}>
-      <RemixServer context={remixContext} url={request.url} />
-    </StylesContext.Provider>
+    <ServerStyleContext.Provider value={chunks.styles}>
+      <CacheProvider value={emotionCache}>
+        <RemixServer context={remixContext} url={request.url} />
+      </CacheProvider>
+    </ServerStyleContext.Provider>
   );
 
   responseHeaders.set("Content-Type", "text/html");
