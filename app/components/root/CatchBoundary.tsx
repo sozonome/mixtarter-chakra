@@ -41,10 +41,6 @@ const CatchBoundary: CatchBoundaryComponent = () => {
 
   return (
     <Document title={`${caught.status} ${caught.statusText}`}>
-      <h1>
-        {caught.status}: {caught.statusText}
-      </h1>
-      {message}
       <MotionBox
         animate={{ y: 20 }}
         transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
@@ -63,7 +59,13 @@ const CatchBoundary: CatchBoundaryComponent = () => {
       </Text>
 
       <Box marginY={4}>
-        <Heading textAlign="center">Page not Found.</Heading>
+        <Box textAlign="center">
+          <Heading>
+            {caught.status}: {caught.statusText}
+          </Heading>
+
+          <Text>{message}</Text>
+        </Box>
 
         <Box textAlign="center" marginTop={4}>
           <Text>It&apos;s Okay!</Text>
