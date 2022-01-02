@@ -6,16 +6,14 @@ import { RemixBrowser } from "remix";
 import ClientStyleContext from "~/styles/context.client";
 import createEmotionCache from "~/styles/createEmotionCache";
 
-const emotionCache = createEmotionCache();
-
 type ClientCacheProviderProps = {
   children: React.ReactNode;
 };
 
 const ClientCacheProvider = ({ children }: ClientCacheProviderProps) => {
-  const [cache, setCache] = React.useState(emotionCache);
+  const [cache, setCache] = React.useState(createEmotionCache());
 
-  const reset = () => setCache(emotionCache);
+  const reset = () => setCache(createEmotionCache());
 
   return (
     <ClientStyleContext.Provider value={{ reset }}>
