@@ -15,8 +15,10 @@ const ClientCacheProvider = ({ children }: ClientCacheProviderProps) => {
 
   const reset = () => setCache(createEmotionCache());
 
+  const clientStyleContextValue = React.useMemo(() => ({ reset }), []);
+
   return (
-    <ClientStyleContext.Provider value={{ reset }}>
+    <ClientStyleContext.Provider value={clientStyleContextValue}>
       <CacheProvider value={cache}>{children}</CacheProvider>
     </ClientStyleContext.Provider>
   );
