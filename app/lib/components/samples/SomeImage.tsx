@@ -1,12 +1,10 @@
-import { Box, Flex, Image, Link, Text, useColorMode } from "@chakra-ui/react";
-
-import MotionBox from "~/lib/components/motion/Box";
+import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 
 import HelperImage from "./HelperImage";
 
-const SomeImage = () => {
-  const { colorMode } = useColorMode();
+import MotionBox from "~/lib/components/motion/Box";
 
+const SomeImage = () => {
   return (
     <Box>
       <MotionBox
