@@ -1,12 +1,14 @@
-import { Flex, Image, Link, Text } from "@chakra-ui/react";
-
-import HelperImage from "./HelperImage";
+import { Box, Flex, Image, Link, Text, useColorMode } from "@chakra-ui/react";
 
 import MotionBox from "~/lib/components/motion/Box";
 
+import HelperImage from "./HelperImage";
+
 const SomeImage = () => {
+  const { colorMode } = useColorMode();
+
   return (
-    <>
+    <Box>
       <MotionBox
         animate={{ y: 20, scale: 0.97 }}
         transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
@@ -22,7 +24,11 @@ const SomeImage = () => {
         />
       </MotionBox>
       <Text textAlign="center" fontSize="xs">
-        <Link href="https://stories.freepik.com/web" isExternal>
+        <Link
+          href="https://stories.freepik.com/web"
+          isExternal
+          rel="noopener noreferrer"
+        >
           Illustration by Freepik Stories
         </Link>
       </Text>
@@ -31,7 +37,7 @@ const SomeImage = () => {
         <HelperImage src="/chakra-ui-logomark-colored.svg" label="Chakra UI" />
         <HelperImage src="/ts-logo-512.svg" label="TypeScript" />
       </Flex>
-    </>
+    </Box>
   );
 };
 

@@ -5,11 +5,16 @@ const repoLink = "https://github.com/sozonome/mixtarter-chakra";
 
 const CTASection = () => {
   return (
-    <Box textAlign="center" marginTop={8}>
-      <Flex marginY={4} justifyContent="center" gridGap={2}>
+    <Box textAlign={{ base: "center", md: "left" }} marginTop={8}>
+      <Flex
+        marginY={4}
+        justifyContent={{ base: "center", md: "left" }}
+        gridGap={2}
+      >
         <Link
           aria-label="Deploy to Vercel"
           isExternal
+          rel="noopener noreferrer"
           href="https://vercel.com/import/git?s=https://github.com/sozonome/mixtarter-chakra"
         >
           <Image src="https://vercel.com/button" alt="Vercel deploy button" />
@@ -18,6 +23,7 @@ const CTASection = () => {
         <Link
           aria-label="Deploy to Netlify"
           isExternal
+          rel="noopener noreferrer"
           href="https://app.netlify.com/start/deploy?repository=https://github.com/sozonome/mixtarter-chakra"
         >
           <Image
@@ -42,7 +48,11 @@ const CTASection = () => {
         </Button>
       </Box>
 
-      <Flex justifyContent="center" alignItems="center" gridGap={2}>
+      <Flex
+        justifyContent={{ base: "center", md: "left" }}
+        alignItems="center"
+        gridGap={2}
+      >
         <Button
           as="a"
           href={repoLink}
@@ -52,7 +62,7 @@ const CTASection = () => {
         >
           Open in Github
         </Button>
-        <Link href={repoLink} isExternal>
+        <Link href={repoLink} isExternal rel="noopener noreferrer">
           <Image
             align="center"
             src="https://img.shields.io/github/stars/sozonome/mixtarter-chakra?style=social"

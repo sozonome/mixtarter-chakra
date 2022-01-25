@@ -1,9 +1,6 @@
-import { Box } from "@chakra-ui/react";
 import type { MetaFunction } from "remix";
 
-import CTASection from "~/lib/components/sample/CTASection";
-import SomeImage from "~/lib/components/sample/SomeImage";
-import SomeText from "~/lib/components/sample/SomeText";
+import Home from "~/lib/routes/home";
 
 // Loaders provide data to components and are only ever called on the server, so
 // you can connect to a database or run any server side code you want right next
@@ -21,14 +18,4 @@ export const meta: MetaFunction = () => {
   };
 };
 
-const Index = () => {
-  return (
-    <Box mb={8} w="full">
-      <SomeText />
-      <SomeImage />
-      <CTASection />
-    </Box>
-  );
-};
-
-export default Index;
+export default Home;
