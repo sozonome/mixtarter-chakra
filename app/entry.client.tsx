@@ -3,8 +3,8 @@ import React from "react";
 import { hydrate } from "react-dom";
 import { RemixBrowser } from "remix";
 
-import ClientStyleContext from "~/styles/context.client";
-import createEmotionCache from "~/styles/createEmotionCache";
+import ClientStyleContext from "~/lib/styles/context.client";
+import createEmotionCache from "~/lib/styles/createEmotionCache";
 
 type ClientCacheProviderProps = {
   children: React.ReactNode;

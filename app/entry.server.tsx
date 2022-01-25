@@ -4,8 +4,8 @@ import { renderToString } from "react-dom/server";
 import { RemixServer } from "remix";
 import type { EntryContext } from "remix";
 
-import ServerStyleContext from "~/styles/context.server";
-import createEmotionCache from "~/styles/createEmotionCache";
+import ServerStyleContext from "~/lib/styles/context.server";
+import createEmotionCache from "~/lib/styles/createEmotionCache";
 
 const emotionCache = createEmotionCache();
 

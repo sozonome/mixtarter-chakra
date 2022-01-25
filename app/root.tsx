@@ -1,8 +1,8 @@
 import { Outlet } from "remix";
 import type { LinksFunction } from "remix";
 
-import { CatchBoundary, Document, ErrorBoundary } from "~/components/root";
-import globalStylesUrl from "~/styles/global.css";
+import { CatchBoundary, Document, ErrorBoundary } from "~/lib/components/root";
+import globalStylesUrl from "~/lib/styles/global.css";
 
 // https://remix.run/api/app#links
 export const links: LinksFunction = () => {

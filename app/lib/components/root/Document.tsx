@@ -5,8 +5,8 @@ import { Links, LiveReload, Meta, Scripts, ScrollRestoration } from "remix";
 import Layout from "./layout";
 import Providers from "./Providers";
 
-import ClientStyleContext from "~/styles/context.client";
-import ServerStyleContext from "~/styles/context.server";
+import ClientStyleContext from "~/lib/styles/context.client";
+import ServerStyleContext from "~/lib/styles/context.server";
 
 type DocumentProps = {
   children: React.ReactNode;
