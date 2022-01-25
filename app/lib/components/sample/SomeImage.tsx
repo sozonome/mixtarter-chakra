@@ -2,7 +2,7 @@ import { Flex, Image, Link, Text } from "@chakra-ui/react";
 
 import HelperImage from "./HelperImage";
 
-import MotionBox from "~/components/motion/Box";
+import MotionBox from "~/lib/components/motion/Box";
 
 const SomeImage = () => {
   return (

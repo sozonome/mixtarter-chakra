@@ -12,7 +12,7 @@ import { Link, useCatch } from "remix";
 
 import Document from "./Document";
 
-import MotionBox from "~/components/motion/Box";
+import MotionBox from "~/lib/components/motion/Box";
 
 // https://remix.run/docs/en/v1/api/conventions#catchboundary
 const CatchBoundary: CatchBoundaryComponent = () => {
