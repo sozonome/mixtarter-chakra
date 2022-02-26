@@ -5,8 +5,8 @@
   "author": "sozonome",
   "version": "0.1.0",
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
+    "build": "cross-env NODE_ENV=production remix build",
+    "dev": "cross-env NODE_ENV=development remix dev",
     "postinstall": "remix setup node",
     "lint": "eslint app",
     "lint:fix": "eslint app --fix && yarn format",
@@ -39,6 +39,7 @@
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.9",
     "commitlint": "^16.2.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.10.0",
     "eslint-config-sznm": "^0.2.1",
     "husky": "^7.0.0",
