@@ -4,8 +4,9 @@ node_modules
 .vercel
 .output
 
-public/build
-api/build
+/build/
+/public/build
+/api/index.js
 
 # TS
 *.tsbuildinfo
