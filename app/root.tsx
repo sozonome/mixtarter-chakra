@@ -1,7 +1,7 @@
 import { Outlet } from "remix";
 import type { LinksFunction } from "remix";
 
-import { CatchBoundary, Document, ErrorBoundary } from "~/lib/components/root";
+import { CatchBoundary, Document, ErrorBoundary } from "~/lib/root";
 import globalStylesUrl from "~/lib/styles/global.css";
 
 // https://remix.run/api/app#links

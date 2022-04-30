@@ -2,9 +2,9 @@ import { withEmotionCache } from "@emotion/react";
 import React from "react";
 import { Links, LiveReload, Meta, Scripts, ScrollRestoration } from "remix";
 
-import Layout from "./layout";
 import Providers from "./Providers";
 
+import Layout from "~/lib/layout";
 import ClientStyleContext from "~/lib/styles/context.client";
 import ServerStyleContext from "~/lib/styles/context.server";
 
