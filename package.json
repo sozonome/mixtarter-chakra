@@ -5,8 +5,8 @@
   "author": "sozonome",
   "version": "0.1.0",
   "scripts": {
-    "build": "cross-env NODE_ENV=production remix build",
-    "dev": "cross-env NODE_ENV=development remix dev",
+    "build": "remix build",
+    "dev": "remix dev",
     "postinstall": "remix setup node",
     "lint": "eslint app",
     "lint:fix": "eslint app --fix && yarn format",
@@ -14,7 +14,7 @@
     "format": "prettier --write app",
     "up": "yarn upgrade-interactive",
     "up-latest": "yarn up --latest",
-    "release": "standard-version",
+    "release": "cross-env HUSKY=0 standard-version",
     "push-release": "git push --follow-tags origin main",
     "prepare": "husky install"
   },
@@ -35,9 +35,11 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/cz-commitlint": "^16.2.4",
     "@remix-run/dev": "^1.4.1",
     "@types/react": "^17.0.44",
     "@types/react-dom": "^17.0.15",
+    "commitizen": "^4.2.4",
     "commitlint": "^16.2.3",
     "cross-env": "^7.0.3",
     "eslint": "^8.14.0",
