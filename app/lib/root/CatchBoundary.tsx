@@ -7,8 +7,8 @@ import {
   Text,
   useColorMode,
 } from "@chakra-ui/react";
+import { Link, useCatch } from "@remix-run/react";
 import type { CatchBoundaryComponent } from "@remix-run/react/routeModules";
-import { Link, useCatch } from "remix";
 
 import Document from "./Document";
 
