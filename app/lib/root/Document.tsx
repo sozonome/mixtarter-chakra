@@ -1,6 +1,12 @@
 import { withEmotionCache } from "@emotion/react";
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Scripts,
+  ScrollRestoration,
+} from "@remix-run/react";
 import React from "react";
-import { Links, LiveReload, Meta, Scripts, ScrollRestoration } from "remix";
 
 import Providers from "./Providers";
 

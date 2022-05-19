@@ -1,5 +1,5 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 
 import ThemeToggle from "./ThemeToggle";
 

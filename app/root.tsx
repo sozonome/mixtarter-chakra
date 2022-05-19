@@ -1,5 +1,5 @@
-import { Outlet } from "remix";
-import type { LinksFunction } from "remix";
+import type { LinksFunction } from "@remix-run/node";
+import { Outlet } from "@remix-run/react";
 
 import { CatchBoundary, Document, ErrorBoundary } from "~/lib/root";
 import globalStylesUrl from "~/lib/styles/global.css";
