@@ -1,3 +1,4 @@
+import { ColorModeScript } from "@chakra-ui/react";
 import { withEmotionCache } from "@emotion/react";
 import {
   Links,
@@ -13,6 +14,7 @@ import Providers from "./Providers";
 import Layout from "~/lib/layout";
 import ClientStyleContext from "~/lib/styles/context.client";
 import ServerStyleContext from "~/lib/styles/context.server";
+import customTheme from "~/lib/styles/theme";
 
 type DocumentProps = {
   children: React.ReactNode;
@@ -57,6 +59,9 @@ const Document = withEmotionCache(
           ))}
         </head>
         <body>
+          <ColorModeScript
+            initialColorMode={customTheme.config?.initialColorMode}
+          />
           <Providers>
             <Layout>{children}</Layout>
           </Providers>
