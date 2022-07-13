@@ -11,11 +11,9 @@ import Home from "~/lib/routes/home";
 // };
 
 // https://remix.run/api/conventions#meta
-export const meta: MetaFunction = () => {
-  return {
-    title: "mixtarter-chakra",
-    description: "Welcome to remix!",
-  };
-};
+export const meta: MetaFunction = () => ({
+  title: "Home | mixtarter-chakra",
+  description: "Welcome to remix!",
+});
 
 export default Home;
